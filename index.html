@@ -848,7 +848,7 @@ voluttà|piacere sensuale; compiacimento
 
       // aggiorna testo dopo un tempo coerente col transition
       setTimeout(() => {
-        pickedWord.textContent = chosen.w;
+        pickedWord.textContent = chosen.w.replace(/-\d+$/, ""); // rimuovi suffisso catalogo
         pickedMeaning.textContent = chosen.m;
       }, 900);
     });
